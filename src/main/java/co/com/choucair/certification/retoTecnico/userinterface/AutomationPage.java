@@ -5,16 +5,20 @@ import org.openqa.selenium.By;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class AutomationPage extends PageObject {
-    public static final Target BUTTON_JOIN_TODAY = Target.the("Button to starts the sing in").located(By.linkText("Join Today"));
+    public static final Target BUTTON_JOIN_TODAY = Target.the("Button to starts the sing in").located(By.xpath("/html/body/ui-view/unauthenticated-container/div/div/unauthenticated-header/div/div[3]/ul[2]/li[2]/a"));
     public static final Target FIRST_NAME = Target.the("Insert first name").located(By.id("firstName"));
     public static final Target LAST_NAME = Target.the("Insert last name").located(By.id("lastName"));
     public static final Target MAIL = Target.the("Insert Email").located(By.id("email"));
-    public static final Target SELECT_MONTH = Target.the("Select month").located(By.xpath("//option[contains(text(),'February')]"));
-    public static final Target SELECT_DAY = Target.the("Select day").located(By.xpath("//select[@id='birthDay']//*[contains(@label,'14')]"));
-    public static final Target SELECT_YEAR = Target.the("Select year").located(By.xpath("//*[contains(@label,'1991')]"));
-    public static final Target BUTTON_LOCATION = Target.the("Select year in box").located(By.xpath("//span[contains(text(),'Next: Location')]"));
+    public static final Target SELECT_MONTH = Target.the("Select month").located(By.xpath("//option[contains(text(),'October)]"));
+    public static final Target SELECT_DAY = Target.the("Select day").located(By.xpath("//select[@id='birthDay']//*[contains(@label,'25')]"));
+    public static final Target SELECT_YEAR = Target.the("Select year").located(By.xpath("//*[contains(@label,'2002')]"));
+    public static final Target BUTTON_LOCATION = Target.the("button location").located(By.xpath("//span[contains(text(),'Next: Location')]"));
 
+    public static final Target CITY = Target.the("insert city").located(By.xpath("//*[@id=\"city\"]"));
+
+    public static final Target POSTAL_CODE = Target.the("insert postal code").located(By.xpath("//*[@id=\"zip\"]"));
     public static final Target BUTTON_DEVICE= Target.the("next, devices").located(By.xpath("//span[contains(text(),'Next: Devices')]"));
+
 
     public static final Target BUTTON_NEXT_STEP = Target.the("next step, last step").located(By.xpath("//span[contains(text(),'Next: Last Step')]"));
 
